@@ -103,6 +103,7 @@ impl Config for Test {
 	type TEECurrency = Balances;
 	type UnixTime = pallet_timestamp::Module<Test>;
 	type Treasury = ();
+	type ModuleWeightInfo = crate::weights::SubstrateWeight<Test>;
 
 	// Parameters
 	type MaxHeartbeatPerWorkerPerHour = MaxHeartbeatPerWorkerPerHour;
@@ -123,6 +124,7 @@ pub type System = frame_system::Module<Test>;
 pub type Balances = pallet_balances::Module<Test>;
 pub type Randomness = pallet_randomness_collective_flip::Module<Test>;
 pub type PhalaModule = Module<Test>;
+pub type Timestamp = pallet_timestamp::Module<Test>;
 
 // This function basically just builds a genesis storage key/value store according to
 // our desired mockup.

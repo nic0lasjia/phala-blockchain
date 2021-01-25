@@ -94,8 +94,10 @@ pub struct WorkerInfo<BlockNumber> {
 	pub last_updated: u64,
 	// mining
 	pub state: WorkerStateEnum<BlockNumber>,
-	// preformance
+	// performance
 	pub score: Option<Score>,
+	// security-level
+	pub confidence_level: u8,
 }
 
 #[derive(Encode, Decode, Default)]
